@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harvesty-Layanan</title>
+    <link rel="icon" href="images/harvesty-logo.png" type="image/png" />
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .navbar-nav .nav-link {
+        border-bottom: 2px solid transparent;
+      }
+      .navbar-nav .nav-link.active {
+        border-bottom: 2px solid #354c2b;
+        color: #354c2b;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #354c2b;
+      }
+      .custom-btn {
+        background-color: white;
+        color: #354c2b;
+        border-radius: 24px;
+        border: 2px solid #345c2b;
+        width: 170px;
+        text-align: center;
+      }
+      .custom-btn:hover {
+        background-color: #345c2b;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top" style="background-color: #e6f6f4; height: 80px">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/text-logo.png" alt="harvesty" style="height: 30px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="layanan.html">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-dark rounded-pill" style="background-color: #354c2b; color: white; width: 140px">Masuk</button>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="container my-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+          <p class="fs-3 fw-bold">Layanan Harvesty</p>
+          <p class="fs-6">Layanan yang kami sediakan</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <!-- layanan 1 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/toko-tani.jpg" class="card-img-top" alt="ilustrasi-toko-tani" style="object-fit: cover; height: 200px" />
+            <div class="card-body text-center">
+              <hr class="border-1" />
+              <a href="https://www.example.com" class="btn custom-btn">Toko Tani</a>
+            </div>
+          </div>
+        </div>
+        <!-- layanan 2 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/konsultasi.jpg" class="card-img-top" alt="ilustrasi-konsultasi" style="object-fit: cover; height: 200px" />
+            <div class="card-body text-center">
+              <hr class="border-1" />
+              <a href="https://www.example.com" class="btn custom-btn">Konsultasi</a>
+            </div>
+          </div>
+        </div>
+        <!-- layanan 3 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img src="images/artikel.jpg" class="card-img-top" alt="ilustrasi-artikel" style="object-fit: cover; height: 200px" />
+            <div class="card-body text-center">
+              <hr class="border-1" />
+              <a href="layanan/artikel.html" class="btn custom-btn">Artikel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 text-center">
+      <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+    </div>
+
+    <!-- KONTAK KAMI -->
+    <div class="container my-5 text-center">
+      <p class="fs-6">Masuk untuk menggunakan layanan Harvesty</p>
+      <a href="https://www.example.com" class="btn btn-dark rounded-pill" style="background-color: #354c2b; color: white; width: 140px">Masuk</a>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="text-white py-5" style="background-color: #2e6b12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <img src="images/text-logo-putih.png" alt="harvesty-text" style="height: 30px" />
+            <p class="mt-3" style="font-size: small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="mt-4" style="font-size: small">Berikan Saran dan Masukan Anda</p>
+            <a href="https://www.example.com" type="button" class="btn btn-light btn-sm rounded-pill custom-btn">Hubungi Kami</a>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <p class="fs-6 fw-bold">Layanan Cepat</p>
+            <div class="d-flex flex-column">
+              <a href="#" class="text-white small mb-2">Toko Tani</a>
+              <a href="#" class="text-white small mb-2">Konsultasi</a>
+              <a href="#" class="text-white small mb-2">Artikel</a>
+              <a href="#" class="text-white small">Chat</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <p class="fs-6 fw-bold">Media Sosial</p>
+            <div class="d-flex gap-3">
+              <a href="https://www.instagram.com" class="text-white text-center">
+                <i class="bi bi-instagram" style="font-size: 2em"></i>
+                <p class="small">Instagram</p>
+              </a>
+              <a href="https://www.linkedin.com" class="text-white text-center">
+                <i class="bi bi-linkedin" style="font-size: 2em"></i>
+                <p class="small">LinkedIn</p>
+              </a>
+              <a href="mailto:example@example.com" class="text-white text-center">
+                <i class="bi bi-envelope" style="font-size: 2em"></i>
+                <p class="small">Email</p>
+              </a>
+              <a href="https://www.tiktok.com" class="text-white text-center">
+                <i class="bi bi-tiktok" style="font-size: 2em"></i>
+                <p class="small">TikTok</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-light" />
+        <p class="text-center small">Copy right @2024 by Harvesty</p>
+      </div>
+    </footer>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
