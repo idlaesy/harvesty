@@ -1,258 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harvesty-Layanan</title>
-    <link rel="icon" href="images/harvesty-logo.png" type="image/png" />
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-      .navbar-nav .nav-link {
-        border-bottom: 2px solid transparent;
-      }
-      .navbar-nav .nav-link.active {
-        border-bottom: 2px solid #354c2b;
-        color: #354c2b;
-      }
-      .navbar-nav .nav-link:hover {
-        color: #354c2b;
-      }
-      .custom-btn {
-        background-color: white;
-        color: #354c2b;
-        border-radius: 24px;
-        border: 2px solid #345c2b;
-        width: 170px;
-        text-align: center;
-      }
-      .custom-btn:hover {
-        background-color: #345c2b;
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Start Navbar -->
-    <nav
-      class="navbar navbar-expand-md sticky-top"
-      style="background-color: #e6f6f4; height: 80px"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="images/text-logo.png" alt="harvesty" style="height: 30px" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harvesty — Layanan Kami</title>
+  <link rel="icon" href="images/harvesty-logo.png" type="image/png" />
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --green: #1b4332;
+      --light-green: #d8f3dc;
+      --gradient: linear-gradient(135deg, #52b788, #1b4332);
+      --transition: all 0.4s ease;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
+      box-shadow: none;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-nav .nav-link {
+      color: #333;
+      margin: 0 14px;
+      font-weight: 500;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: var(--transition);
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--green);
+    }
+
+    .btn-custom {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 26px;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(82, 183, 136, 0.3);
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(82, 183, 136, 0.45);
+    }
+
+    /* ===== Hero Section ===== */
+    .hero-section {
+      background: linear-gradient(120deg, #f6fff9 0%, #e6f6f4 100%);
+      padding: 6rem 0 4rem;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .hero-section p {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-bar {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ===== Services Section ===== */
+    .services-section {
+      padding: 4rem 0;
+    }
+
+    .service-card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-card .card-body {
+      padding: 1.2rem;
+    }
+
+    .service-card h5 {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: linear-gradient(180deg, #1b4332, #081c15);
+      color: #fff;
+      padding-top: 4rem;
+    }
+
+    footer a {
+      color: #d8f3dc;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    footer hr {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .social-icon i {
+      font-size: 1.8rem;
+      color: #d8f3dc;
+      transition: var(--transition);
+    }
+
+    .social-icon i:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-md fixed-top py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/text-logo.png" alt="Harvesty" style="height: 32px" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="layanan.html">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <a href="login.html" class="btn btn-custom d-none d-md-block">Masuk</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Ayo!! Jelajahi Layanan Kami</h1>
+      <p>Kami menyediakan berbagai layanan untuk membantu petani meningkatkan hasil dan efisiensi pertanian.</p>
+
+      <form class="search-bar d-flex justify-content-center">
+        <input type="text" class="form-control rounded-start-pill" placeholder="Cari layanan..." />
+        <button type="submit" class="btn btn-success rounded-end-pill px-4">
+          <i class="bi bi-search"></i> Cari
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="layanan.html"
-                >Layanan</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontak.html">Kontak</a>
-            </li>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Services Section ===== -->
+  <section class="services-section">
+    <div class="container">
+      <h3 class="mb-4 fw-bold text-center text-success">Layanan Kami</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card" onclick="window.location.href='toko-tani.html'">
+            <img src="images/service1.jpg" alt="Toko Tani">
+            <div class="card-body">
+              <h5>Toko Tani</h5>
+              <p>Penuhi kebutuhan pertanianmu dengan produk berkualitas tinggi dari Harvesty.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card" onclick="window.location.href='layanan/konsultasi.html'">
+            <img src="images/service2.jpg" alt="Konsultasi">
+            <div class="card-body">
+              <h5>Konsultasi Pertanian</h5>
+              <p>Dapatkan saran dari ahli pertanian kami untuk meningkatkan produktivitas lahanmu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card" onclick="window.location.href='artikel.html'">
+            <img src="images/service3.jpg" alt="Artikel">
+            <div class="card-body">
+              <h5>Artikel Edukasi</h5>
+              <p>Pelajari teknologi dan inovasi terbaru di dunia pertanian modern.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-md-5 mb-4">
+          <img src="images/text-logo-putih.png" alt="Harvesty" style="height: 30px" />
+          <p class="mt-3 small text-light">
+            Kami berkomitmen membantu petani Indonesia beradaptasi dengan teknologi dan meningkatkan kesejahteraan
+            melalui pertanian digital.
+          </p>
+          <a href="mailto:support@harvesty.id" class="btn btn-light btn-sm rounded-pill mt-2">Hubungi Kami</a>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <p class="fw-semibold">Layanan Cepat</p>
+          <ul class="list-unstyled small">
+            <li><a href="toko-tani.html">Toko Tani</a></li>
+            <li><a href="konsultasi.html">Konsultasi</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="#">Chat</a></li>
           </ul>
         </div>
-        <a
-          href="login.html"
-          class="btn"
-          style="
-            background: #354c2b;
-            color: white;
-            border-radius: 24px;
-            width: 140px;
-          "
-          >Masuk</a
-        >
-      </div>
-    </nav>
-    <!-- End Navbar -->
 
-    <div class="container my-5">
-      <div class="row justify-content-center text-center">
-        <div class="col-12 col-lg-10">
-          <p class="fs-3 fw-bold">Layanan Harvesty</p>
-          <p class="fs-6">Layanan yang kami sediakan</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <!-- layanan 1 -->
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img
-              src="images/toko-tani.jpg"
-              class="card-img-top"
-              alt="ilustrasi-toko-tani"
-              style="object-fit: cover; height: 200px"
-            />
-            <div class="card-body text-center">
-              <hr class="border-1" />
-              <a href="layanan/e-commerce.html" class="btn custom-btn"
-                >Toko Tani</a
-              >
-            </div>
-          </div>
-        </div>
-        <!-- layanan 2 -->
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img
-              src="images/konsultasi.jpg"
-              class="card-img-top"
-              alt="ilustrasi-konsultasi"
-              style="object-fit: cover; height: 200px"
-            />
-            <div class="card-body text-center">
-              <hr class="border-1" />
-              <a href="layanan/konsultasi.html" class="btn custom-btn"
-                >Konsultasi</a
-              >
-            </div>
-          </div>
-        </div>
-        <!-- layanan 3 -->
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img
-              src="images/artikel.jpg"
-              class="card-img-top"
-              alt="ilustrasi-artikel"
-              style="object-fit: cover; height: 200px"
-            />
-            <div class="card-body text-center">
-              <hr class="border-1" />
-              <a href="layanan/artikel.html" class="btn custom-btn">Artikel</a>
-            </div>
+        <div class="col-md-4 mb-4">
+          <p class="fw-semibold">Media Sosial</p>
+          <div class="d-flex gap-4 mt-3">
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-envelope"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
       </div>
+      <hr />
+      <p class="text-center small mb-0">© 2024 Harvesty. Semua hak dilindungi.</p>
     </div>
+  </footer>
 
-    <div class="container my-5 text-center">
-      <p class="fs-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      </p>
-    </div>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
+      document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 20);
+    });
+  </script>
+</body>
 
-    <!-- KONTAK KAMI -->
-    <div class="container my-5 text-center">
-      <p class="fs-6">Masuk untuk menggunakan layanan Harvesty</p>
-      <a
-        href="https://www.example.com"
-        class="btn btn-dark rounded-pill"
-        style="background-color: #354c2b; color: white; width: 140px"
-        >Masuk</a
-      >
-    </div>
-
-    <!--FOOTER-->
-    <footer class="text-white py-5" style="background-color: #2e6b12">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <img
-              src="images/text-logo-putih.png"
-              alt="harvesty-text"
-              style="height: 30px"
-            />
-            <p class="mt-3" style="font-size: small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p class="mt-4" style="font-size: small">
-              Berikan Saran dan Masukan Anda
-            </p>
-            <a
-              href="https://www.example.com"
-              type="button"
-              class="btn btn-light btn-sm rounded-pill custom-btn"
-              >Hubungi Kami</a
-            >
-          </div>
-
-          <div class="col-md-3 mb-4">
-            <p class="fs-6 fw-bold">Layanan Cepat</p>
-            <div class="d-flex flex-column">
-              <a href="#" class="text-white small mb-2">Toko Tani</a>
-              <a href="#" class="text-white small mb-2">Konsultasi</a>
-              <a href="#" class="text-white small mb-2">Artikel</a>
-              <a href="#" class="text-white small">Chat</a>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb-4">
-            <p class="fs-6 fw-bold">Media Sosial</p>
-            <div class="d-flex gap-3">
-              <a
-                href="https://www.instagram.com"
-                class="text-white text-center"
-              >
-                <i class="bi bi-instagram" style="font-size: 2em"></i>
-                <p class="small">Instagram</p>
-              </a>
-              <a href="https://www.linkedin.com" class="text-white text-center">
-                <i class="bi bi-linkedin" style="font-size: 2em"></i>
-                <p class="small">LinkedIn</p>
-              </a>
-              <a
-                href="mailto:example@example.com"
-                class="text-white text-center"
-              >
-                <i class="bi bi-envelope" style="font-size: 2em"></i>
-                <p class="small">Email</p>
-              </a>
-              <a href="https://www.tiktok.com" class="text-white text-center">
-                <i class="bi bi-tiktok" style="font-size: 2em"></i>
-                <p class="small">TikTok</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <hr class="border-light" />
-        <p class="text-center small">Copy right @2024 by Harvesty</p>
-      </div>
-    </footer>
-
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-  </body>
 </html>
