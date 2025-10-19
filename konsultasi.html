@@ -2,15 +2,15 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harvesty — Konsultasi Pertanian</title>
-  <link rel="icon" href="images/harvesty-logo.png" type="image/png">
-  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="icon" href="images/harvesty-logo.png" type="image/png" />
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 
   <style>
     :root {
@@ -36,7 +36,7 @@
     }
 
     .navbar.scrolled {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     }
 
@@ -133,6 +133,17 @@
       color: var(--green);
     }
 
+    .clickable {
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .clickable:hover {
+      background: var(--light-green);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 22px rgba(82, 183, 136, 0.25);
+    }
+
     /* ===== Konsultan ===== */
     .consult-section {
       background-color: #f8fdf9;
@@ -215,7 +226,7 @@
 </head>
 
 <body>
-  <!-- ===== Navbar (sama seperti artikel.html) ===== -->
+  <!-- ===== Navbar ===== -->
   <nav class="navbar navbar-expand-md fixed-top py-3">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -228,8 +239,7 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
-          <li class="nav-item"><a class="nav-link active" href="konsultasi.html">Konsultasi</a></li>
+          <li class="nav-item"><a class="nav-link active" href="layanan.html">Layanan</a></li>
           <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
         </ul>
@@ -258,13 +268,17 @@
             <p>Pilih konsultan sesuai bidang dan kebutuhan Anda.</p>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="step-card">
-            <i class="bi bi-chat-dots"></i>
-            <h6>Kirim Pertanyaan</h6>
-            <p>Ajukan masalah pertanian untuk mendapatkan solusi ahli.</p>
-          </div>
+          <a href="kirimPertanyaan.html" class="text-decoration-none text-dark">
+            <div class="step-card clickable">
+              <i class="bi bi-chat-dots"></i>
+              <h6>Kirim Pertanyaan</h6>
+              <p>Ajukan masalah pertanian untuk mendapatkan solusi ahli.</p>
+            </div>
+          </a>
         </div>
+
         <div class="col-md-4">
           <div class="step-card">
             <i class="bi bi-lightbulb"></i>
@@ -286,28 +300,31 @@
             <div class="consult-img"><i class="bi bi-person-circle"></i></div>
             <div>
               <h6>Sophia Collins</h6>
-              <small>Konsultan Agribisnis</small><br>
-              <button class="btn btn-outline-success btn-sm mt-2">Hubungi</button>
+              <small>Konsultan Agribisnis</small><br />
+              <button class="btn btn-outline-success btn-sm mt-2 hubungi-btn"
+                data-nama="Sophia Collins">Hubungi</button>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4">
           <div class="consult-card">
             <div class="consult-img"><i class="bi bi-person-circle"></i></div>
             <div>
               <h6>Budi Santoso</h6>
-              <small>Ahli Hortikultura</small><br>
-              <button class="btn btn-outline-success btn-sm mt-2">Hubungi</button>
+              <small>Ahli Hortikultura</small><br />
+              <button class="btn btn-outline-success btn-sm mt-2 hubungi-btn" data-nama="Budi Santoso">Hubungi</button>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4">
           <div class="consult-card">
             <div class="consult-img"><i class="bi bi-person-circle"></i></div>
             <div>
               <h6>Lina Hartati</h6>
-              <small>Spesialis Tanaman Pangan</small><br>
-              <button class="btn btn-outline-success btn-sm mt-2">Hubungi</button>
+              <small>Spesialis Tanaman Pangan</small><br />
+              <button class="btn btn-outline-success btn-sm mt-2 hubungi-btn" data-nama="Lina Hartati">Hubungi</button>
             </div>
           </div>
         </div>
@@ -315,12 +332,12 @@
     </div>
   </section>
 
-  <!-- ===== Footer (sama seperti artikel.html) ===== -->
+  <!-- ===== Footer ===== -->
   <footer>
     <div class="container text-white">
       <div class="row">
         <div class="col-md-5 mb-4">
-          <img src="images/text-logo-putih.png" alt="Harvesty" style="height: 30px">
+          <img src="images/text-logo-putih.png" alt="Harvesty" style="height: 30px" />
           <p class="mt-3 small text-light">
             Kami berkomitmen membantu petani Indonesia beradaptasi dengan teknologi dan meningkatkan kesejahteraan
             melalui pertanian digital.
@@ -331,7 +348,7 @@
         <div class="col-md-3 mb-4">
           <p class="fw-semibold">Layanan Cepat</p>
           <ul class="list-unstyled small">
-            <li><a href="layanan.html">Toko Tani</a></li>
+            <li><a href="toko.html">Toko Tani</a></li>
             <li><a href="konsultasi.html">Konsultasi</a></li>
             <li><a href="artikel.html">Artikel</a></li>
             <li><a href="kontak.html">Chat</a></li>
@@ -348,7 +365,7 @@
           </div>
         </div>
       </div>
-      <hr>
+      <hr />
       <p class="text-center small mb-0">© 2025 Harvesty. Semua hak dilindungi.</p>
     </div>
   </footer>
@@ -356,8 +373,16 @@
   <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Navbar scroll effect
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", () => {
       document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 20);
+    });
+
+    // Tombol Hubungi → arahkan ke kirim-pertanyaan.html
+    document.querySelectorAll(".hubungi-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const nama = btn.getAttribute("data-nama");
+        window.location.href = `kirim-pertanyaan.html?konsultan=${encodeURIComponent(nama)}`;
+      });
     });
   </script>
 </body>

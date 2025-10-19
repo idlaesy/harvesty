@@ -120,6 +120,8 @@
       background: #fff;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       cursor: pointer;
+      text-align: center;
+      padding: 2rem 1rem;
     }
 
     .service-card:hover {
@@ -127,19 +129,30 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
-    .service-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
+    .service-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--light-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 2.5rem;
+      color: var(--green);
+      transition: var(--transition);
     }
 
-    .service-card .card-body {
-      padding: 1.2rem;
+    .service-card:hover .service-icon {
+      background: var(--gradient);
+      color: #fff;
+      transform: rotate(6deg);
     }
 
     .service-card h5 {
       color: var(--green);
       font-weight: 600;
+      margin-bottom: 0.5rem;
     }
 
     .service-card p {
@@ -188,8 +201,7 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/text-logo.png" alt="Harvesty" style="height: 32px" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -225,33 +237,30 @@
     <div class="container">
       <h3 class="mb-4 fw-bold text-center text-success">Layanan Kami</h3>
       <div class="row g-4">
+        <!-- Toko Tani -->
         <div class="col-md-4">
           <div class="service-card" onclick="window.location.href='tokotani.html'">
-            <img src="images/service1.jpg" alt="Toko Tani">
-            <div class="card-body">
-              <h5>Toko Tani</h5>
-              <p>Penuhi kebutuhan pertanianmu dengan produk berkualitas tinggi dari Harvesty.</p>
-            </div>
+            <div class="service-icon"><i class="bi bi-shop"></i></div>
+            <h5>Toko Tani</h5>
+            <p>Penuhi kebutuhan pertanianmu dengan produk berkualitas tinggi dari Harvesty.</p>
           </div>
         </div>
 
+        <!-- Konsultasi -->
         <div class="col-md-4">
-          <div class="service-card" onclick="window.location.href='layanan/konsultasi.html'">
-            <img src="images/service2.jpg" alt="Konsultasi">
-            <div class="card-body">
-              <h5>Konsultasi Pertanian</h5>
-              <p>Dapatkan saran dari ahli pertanian kami untuk meningkatkan produktivitas lahanmu.</p>
-            </div>
+          <div class="service-card" onclick="window.location.href='konsultasi.html'">
+            <div class="service-icon"><i class="bi bi-chat-left-text"></i></div>
+            <h5>Konsultasi Pertanian</h5>
+            <p>Dapatkan saran dari ahli pertanian kami untuk meningkatkan produktivitas lahanmu.</p>
           </div>
         </div>
 
+        <!-- Artikel Edukasi -->
         <div class="col-md-4">
           <div class="service-card" onclick="window.location.href='artikel.html'">
-            <img src="images/service3.jpg" alt="Artikel">
-            <div class="card-body">
-              <h5>Artikel Edukasi</h5>
-              <p>Pelajari teknologi dan inovasi terbaru di dunia pertanian modern.</p>
-            </div>
+            <div class="service-icon"><i class="bi bi-journal-text"></i></div>
+            <h5>Artikel Edukasi</h5>
+            <p>Pelajari teknologi dan inovasi terbaru di dunia pertanian modern.</p>
           </div>
         </div>
       </div>
@@ -292,7 +301,7 @@
         </div>
       </div>
       <hr />
-      <p class="text-center small mb-0">© 2024 Harvesty. Semua hak dilindungi.</p>
+      <p class="text-center small mb-0">© 2025 Harvesty. Semua hak dilindungi.</p>
     </div>
   </footer>
 
