@@ -24,6 +24,7 @@
       font-family: "Poppins", sans-serif;
       background-color: #fdfdfd;
       color: #333;
+      overflow-x: hidden;
     }
 
     /* ===== Navbar ===== */
@@ -36,7 +37,7 @@
 
     .navbar.scrolled {
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
     }
 
     .navbar-brand img {
@@ -156,35 +157,84 @@
       }
     }
 
-    /* ===== Support Section ===== */
-    .support {
+    /* ===== Features ===== */
+    .features {
+      padding: 4rem 0;
+      background-color: #ffffff;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      transition: var(--transition);
+      border: 1px solid #eee;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(82, 183, 136, 0.15);
+    }
+
+    .feature-card i {
+      font-size: 2.5rem;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+
+    /* ===== Services Section ===== */
+    .services {
       background-color: #f8faf9;
       padding: 4rem 0;
     }
 
-    .support p {
-      color: #666;
-      font-size: 0.95rem;
+    .services h3 {
+      color: var(--green);
+      font-weight: 700;
     }
 
-    .support img {
-      margin: 0 16px;
-      opacity: 0.8;
+    .service-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
       transition: var(--transition);
-      filter: grayscale(100%);
+      border: 1px solid #eee;
     }
 
-    .support img:hover {
-      filter: grayscale(0%);
-      opacity: 1;
-      transform: scale(1.05);
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(82, 183, 136, 0.1);
+    }
+
+    .service-item img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== Testimonial ===== */
+    .testimonial {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #e6f6f4, #f6fff9);
+    }
+
+    .testimonial blockquote {
+      font-style: italic;
+      color: #444;
+    }
+
+    .testimonial .author {
+      margin-top: 1rem;
+      color: var(--green);
+      font-weight: 600;
     }
 
     /* ===== Footer ===== */
     footer {
       background: var(--green);
       color: #fff;
-      padding: 1.5rem 0;
+      padding: 2rem 0;
       text-align: center;
       font-size: 0.9rem;
     }
@@ -222,8 +272,8 @@
         <div class="col-md-6 text-center text-md-start">
           <h1>Solusi Cerdas untuk Pertanian Modern</h1>
           <p>
-            Harvesty hadir membantu petani Indonesia mengoptimalkan hasil pertanian
-            dengan teknologi digital, pelatihan, dan akses pasar yang luas.
+            Harvesty membantu petani Indonesia mengoptimalkan hasil pertanian dengan teknologi digital, pelatihan,
+            dan akses pasar yang lebih luas.
           </p>
           <a href="about.html" class="btn btn-custom mt-3">Pelajari Lebih Lanjut</a>
         </div>
@@ -234,10 +284,86 @@
     </div>
   </section>
 
-  <!-- ===== Support Section ===== -->
-  <section class="support text-center">
+  <!-- ===== Features Section ===== -->
+  <section class="features text-center">
     <div class="container">
-      <p class="fw-semibold mb-4">Didukung oleh</p>
+      <h3 class="fw-bold mb-4 text-success">Kenapa Memilih Harvesty?</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-cloud-arrow-up"></i>
+            <h5>Digitalisasi Pertanian</h5>
+            <p>Kami menghadirkan sistem berbasis teknologi untuk membantu petani mengelola lahan secara efisien.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-people"></i>
+            <h5>Dukungan Ahli</h5>
+            <p>Dapatkan panduan dari konsultan dan pakar pertanian yang berpengalaman di berbagai bidang.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-basket"></i>
+            <h5>Akses Pasar Luas</h5>
+            <p>Hubungkan hasil panen langsung dengan pembeli dan industri melalui platform kami.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Section ===== -->
+  <section class="services text-center">
+    <div class="container">
+      <h3 class="mb-4">Layanan Kami</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-item">
+            <img src="images/service1.jpg" alt="Toko Tani">
+            <h5>Toko Tani</h5>
+            <p>Belanja produk pertanian berkualitas untuk kebutuhan lahanmu.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <img src="images/service2.jpg" alt="Konsultasi">
+            <h5>Konsultasi Pertanian</h5>
+            <p>Berkonsultasi langsung dengan pakar untuk solusi pertanianmu.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <img src="images/service3.jpg" alt="Artikel Edukasi">
+            <h5>Artikel Edukasi</h5>
+            <p>Tingkatkan pengetahuanmu dengan artikel dan tips terbaru di bidang pertanian.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonial Section ===== -->
+  <section class="testimonial text-center">
+    <div class="container">
+      <h3 class="fw-bold text-success mb-4">Apa Kata Petani?</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <blockquote>
+            “Sejak bergabung dengan Harvesty, saya jadi lebih paham cara mengelola lahan dan hasil panen meningkat 30%.
+            Layanannya sangat membantu!”
+          </blockquote>
+          <div class="author">— Budi Santoso, Petani Jagung, Lampung</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Support Section ===== -->
+  <section class="support text-center py-4">
+    <div class="container">
+      <p class="fw-semibold mb-3">Didukung oleh</p>
       <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
         <img src="images/bdt-logo.png" alt="BDT" style="max-width: 70px" />
         <p class="mb-0">Baparekraf Digital Talent 2024</p>
